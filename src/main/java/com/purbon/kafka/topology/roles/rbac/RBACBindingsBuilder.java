@@ -194,7 +194,7 @@ public class RBACBindingsBuilder implements BindingsBuilderProvider {
           if (producer.getIdempotence().isPresent()  && producer.getIdempotence().get().equals(Boolean.TRUE)) {
             binding =
                 apiClient.bind(
-                    producer.getPrincipal(), DEVELOPER_WRITE, "Cluster", "kafka-cluster", LITERAL);
+                    producer.getPrincipal(), DEVELOPER_WRITE, "kafka-cluster", "Cluster", LITERAL);
             bindings.add(binding);
           }
         });
